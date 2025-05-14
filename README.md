@@ -76,5 +76,5 @@ Made by Anita Hong
 
 Built with empathy, imperfection, and quiet courage. Deployed on Vercel. Designed to be both practical and emotionally supportive.
 
-Visit the Live App
-GitHub Repo
+[Visit the Live App](https://sort-my-brain.vercel.app)  
+[GitHub Repo](https://github.com/anitahong1/sort-my-brain)

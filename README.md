@@ -95,5 +95,5 @@ Sort My Brain is for you.
 Built with empathy, imperfection, and quiet courage.  
 Deployed on Vercel. Designed to be both practical and emotionally supportive.
 
-[👉 Try the Live App](https://your-vercel-url.vercel.app)  
+[👉 Try the Live App](https://sort-my-brain.vercel.app)  
 [🔗 View the GitHub Repo](https://github.com/your-username/sort-my-brain)

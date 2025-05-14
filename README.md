@@ -1,5 +1,7 @@
 # Sort My Brain
 
+[👉 Try the Live App](https://sort-my-brain.vercel.app)  
+
 **Sort My Brain** is a web-based journaling tool designed to help people gently organize their overwhelmed thoughts. You start with a freeform brain dump—just typing out whatever is in your head—and the app intelligently extracts your mood, a structured to-do list, and even offers a simple breathing exercise to help you ground yourself.
 
 It’s a soft interface for busy, burnt-out, overstimulated brains. Like a composition notebook with a little bit of magic.
@@ -94,5 +96,3 @@ Sort My Brain is for you.
 **By Anita Hong**  
 Built with empathy, imperfection, and quiet courage.  
 Deployed on Vercel. Designed to be both practical and emotionally supportive.
-
-[👉 Try the Live App](https://sort-my-brain.vercel.app)  

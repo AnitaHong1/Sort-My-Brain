@@ -8,8 +8,7 @@ It’s a soft interface for busy, burnt-out, overstimulated brains. Like a compo
 
 ## 📸 Preview
 
-![Sort My Brain Screenshot](./screenshot.png)  
-*Replace this image with your own app screenshot*
+![Sort My Brain Screenshot](./Screenshot_20250514_072128_Chrome.jpg)
 
 ---
 

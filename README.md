@@ -31,10 +31,8 @@ It’s a soft interface for busy, burnt-out, overstimulated brains. Like a compo
 ---
 
 ## Tech Stack
-
 - HTML/CSS for layout and styling
 - Vanilla JavaScript for local logic (parsing, UI control)
-
 - Built to be easily upgraded with OpenAI API integration in the future
 
 
@@ -55,7 +53,6 @@ When upgraded with the OpenAI API, Sort My Brain will:
 ---
 
 ## Usage
-
 1. Clone or download the repository
 2. Open index.html in your browser
 3. Start typing in the notebook, then click Sort My Brain
@@ -63,17 +60,12 @@ When upgraded with the OpenAI API, Sort My Brain will:
 ---
 
 ## Why This Exists
-
 This was born from the experience of being mentally overloaded, emotionally stuck, and needing a place to begin—not a productivity app yelling at you to “get more done.”
 
 It’s for anyone who’s felt like:
-
 - “I’m so behind on life.”
-
 - “Everything feels too loud.”
-
 - “I want to do better but I don’t know where to start.”
-
 
 Sort My Brain is for you.
 

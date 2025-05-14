@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cover {
+  background: url('composition-cover.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+.cover-label {
+  background: white;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.cover button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #222e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.notebook {
+  display: none;
+  flex-direction: column;
+  background: #fffdfc;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  font-size: 1rem;
+  padding: 1rem;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #222e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.output {
+  margin-top: 2rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}

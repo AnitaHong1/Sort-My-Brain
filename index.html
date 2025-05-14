@@ -109,16 +109,16 @@
 
       // To-do detection with synonyms
       if (input.match(/(laundry|dirty clothes|no clean clothes|hamper)/)) {
-        todos.push("Do laundry", "• Wash", "• Dry", "• Put clothes away");
+        todos.push(["Do laundry", "Wash", "Dry", "Put clothes away"]);
       }
       if (input.match(/(interview|job interview|behavioral interview)/)) {
-        todos.push("Prepare for interview", "• Review Q&A", "• Write bullet points", "• Practice responses");
+        todos.push(["Prepare for interview", "Review Q&A", "Write bullet points", "Practice responses"]);
       }
       if (input.match(/(food|recipe|healthy meal|gross|haven’t eaten)/)) {
-        todos.push("Eat something nourishing", "• Plan a simple recipe");
+        todos.push(["Eat something nourishing", "Plan a simple recipe"]);
       }
       if (input.match(/(friend|reply|respond|text back)/)) {
-        todos.push("Text friend back (no pressure)");
+        todos.push(["Text friend back (no pressure)"]);
       }
 
       // Fallback message
@@ -127,7 +127,18 @@
         <h3>Mood:</h3>
         <p>${mood.length > 0 ? mood.join(", ") : "unsure"}</p>
         <h3>To-Do:</h3>
-        <ul>${todos.map(t => `<li>${t}</li>`).join('')}</ul>
+        <ul>
+          ${todos.map(t => {
+            if (Array.isArray(t)) {
+              const [main, ...subs] = t;
+              return `<li>${main}<ul>${subs.map(sub => `<li>${sub}</li>`).join('')}</ul></li>`;
+            } else {
+              return `<li>${t}</li>`;
+            }
+          }).join('')}
+        </ul>
+        <h3>Breathing Exercise:</h3>
+        <p>Inhale for 4 seconds, hold for 7, exhale for 8. Repeat 3x.</p>`;
         <h3>Breathing Exercise:</h3>
         <p>Inhale for 4 seconds, hold for 7, exhale for 8. Repeat 3x.</p>
       `;
@@ -142,4 +153,4 @@
       `;
     }
   </script></body>
-</html> 
+</html>

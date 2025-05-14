@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sort My Brain</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .cover {
+      background: url('file-5jMSC7sEeLNimzrqv52gB3') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+    .cover-label {
+      background: white;
+      color: black;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .cover button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #222e50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .notebook {
+      display: none;
+      flex-direction: column;
+      background: #fffdfc;
+      height: 100vh;
+      width: 100vw;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    textarea {
+      width: 100%;
+      height: 300px;
+      font-size: 1rem;
+      padding: 1rem;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #222e50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .output {
+      margin-top: 2rem;
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover" id="cover">
+    <div class="cover-label">
+      <h1>Marble Mind</h1>
+      <p>A cozy notebook for your messy thoughts</p>
+      <button onclick="openNotebook()">Open to First Page</button>
+    </div>
+  </div>  <div class="notebook" id="notebook">
+    <h2>Brain Dump</h2>
+    <textarea id="input" placeholder="Type whatever's on your mind..."></textarea>
+    <button onclick="sortBrain()">Sort My Brain</button>
+    <div class="output" id="output"></div>
+  </div>  <script>
+    function openNotebook() {
+      document.getElementById('cover').style.display = 'none';
+      document.getElementById('notebook').style.display = 'flex';
+    }
+
+    function sortBrain() {
+      const input = document.getElementById('input').value.toLowerCase();
+      const output = document.getElementById('output');
+      let mood = [];
+      let todos = [];
+
+      if (input.includes("nervous") || input.includes("anxious")) mood.push("anxious");
+      if (input.includes("tired")) mood.push("tired");
+      if (input.includes("fat")) mood.push("self-conscious");
+
+      if (input.includes("laundry")) {
+        todos.push("Do laundry", "• Wash", "• Dry", "• Put clothes away");
+      }
+      if (input.includes("interview")) {
+        todos.push("Prepare for interview", "• Review Q&A", "• Write bullet points", "• Practice responses");
+      }
+      if (input.includes("recipe") || input.includes("food")) {
+        todos.push("Look up healthy recipes");
+      }
+
+      output.innerHTML = `
+        <h3>Mood:</h3>
+        <p>${mood.length > 0 ? mood.join(", ") : "unsure"}</p>
+        <h3>To-Do:</h3>
+        <ul>${todos.map(t => `<li>${t}</li>`).join('')}</ul>
+      `;
+    }
+  </script></body>
+</html>
